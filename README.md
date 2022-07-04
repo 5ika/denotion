@@ -1,7 +1,13 @@
 # Denotion
+
+Notion is useful but our data are locked in the service.
+Denotion is a tool to download Notion's content and publish it easily as HTML content.
+
 ## Usage
 ```bash
-deno run --allow-net --allow-write  --allow-read=.env,.env.defaults,md --allow-env   https://raw.githubusercontent.com/5ika/notion-to-md-deno/raw/master/mode.ts
+cp .env.example .env
+edit .env
+deno run --allow-net --allow-write  --allow-read=.env,.env.defaults,md --allow-env https://raw.githubusercontent.com/5ika/denotion/main/mod.ts
 ```
 
 ### Options

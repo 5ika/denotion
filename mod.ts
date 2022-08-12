@@ -4,11 +4,12 @@ import { Client } from "https://deno.land/x/notion_sdk@v1.0.4/src/mod.ts";
 import { convertDirectory } from "./mdToHtml.ts";
 import NotionToMarkdown from "./notionToMd.ts";
 
-const NOTION_SECRET = Deno.env.get("NOTION_SECRET");
-const ENTRYPOINT_PAGEID = Deno.env.get("ENTRYPOINT_PAGEID") || "";
 const DIRECTORY_MD = "./md";
 const DIRECTORY_HTML = "./html";
 const args = parse(Deno.args);
+const NOTION_SECRET = args.notionSecret || Deno.env.get("NOTION_SECRET");
+const ENTRYPOINT_PAGEID =
+  args.pageId || Deno.env.get("ENTRYPOINT_PAGEID") || "";
 
 const notion = new Client({
   auth: NOTION_SECRET,

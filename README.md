@@ -1,3 +1,5 @@
+> MOVED TO ssh://5ika.ch:1917/denotion
+
 # Denotion
 
 Notion is useful but our data are locked in the service.
